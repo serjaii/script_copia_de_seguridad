@@ -1,0 +1,10 @@
+#Este fichero se guarda en /etc/systemd/system/
+[Unit]
+Description=Servicio de copia de seguridad con rsync
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/backup-rsync.sh
+
+[Install]
+WantedBy=multi-user.target
